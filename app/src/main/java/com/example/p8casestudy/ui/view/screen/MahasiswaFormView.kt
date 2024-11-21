@@ -117,7 +117,7 @@ fun MahasiswaFormView(
                         )
                     },
                     keyboardOptions = KeyboardOptions(
-                        keyboardType = KeyboardType.Phone,
+                        keyboardType = KeyboardType.Number,
                         imeAction = ImeAction.Next
                     ),
                     singleLine = true,
@@ -156,7 +156,7 @@ fun MahasiswaFormView(
                     },
                     keyboardOptions = KeyboardOptions(
                         keyboardType = KeyboardType.Email,
-                        imeAction = ImeAction.Next
+                        imeAction = ImeAction.Done
                     ),
                     singleLine = true,
                     shape = RoundedCornerShape(50.dp)
