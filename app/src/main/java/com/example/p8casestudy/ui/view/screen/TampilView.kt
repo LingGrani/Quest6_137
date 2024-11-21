@@ -59,21 +59,6 @@ fun TampilView(
                     .clip(shape = CircleShape)
                     .size(50.dp)
             )
-            Spacer(modifier = Modifier.padding(start = 16.dp))
-            Column(modifier = Modifier.weight(1f)){
-                Text(
-                    text = uiStateMhs.nama,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp,
-                    color = Color.White
-                )
-                Text(
-                    text = uiStateMhs.nim,
-                    fontWeight = FontWeight.Light,
-                    fontSize = 12.sp,
-                    color = Color.White
-                )
-            }
             Box {
                 Icon(
                     imageVector = Icons.Filled.Notifications,
@@ -94,13 +79,14 @@ fun TampilView(
             ) {
                 Column (
                 ){
-                    Text("Nim:")
+                    Text("Nim:", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                     Text(uiStateMhs.nim)
-                    Text("Nama:")
+                    Text("Nama:", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                     Text(uiStateMhs.nama)
                 }
                 Column (
                 ){
+                    Text(text = "Email", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                     Text(uiStateMhs.email)
                 }
             }
@@ -108,11 +94,11 @@ fun TampilView(
             Column (
                 modifier = Modifier.fillMaxWidth()
             ){
-                Text("Matakuliah yang diabli:")
+                Text("Matakuliah yang diambli:",  fontWeight = FontWeight.Bold, fontSize = 20.sp)
                 Text(uiStateMK.namaMK)
                 Row(){
-                    Text(text = "Kelas:")
-                    Text(uiStateMK.kelas)
+                    Text(text = "Kelas:", fontSize = 16.sp)
+                    Text(uiStateMK.kelas, fontSize = 16.sp)
                 }
             }
             Spacer(modifier = Modifier.padding(32.dp))
