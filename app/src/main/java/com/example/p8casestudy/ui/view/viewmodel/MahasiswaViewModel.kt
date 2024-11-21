@@ -9,12 +9,12 @@ import kotlinx.coroutines.flow.update
 
 class MahasiswaViewModel: ViewModel(){
 
-    private val _statusUI = MutableStateFlow(Mahasiswa())
+    private val _mahasiswasUiState = MutableStateFlow(Mahasiswa())
 
-    val statusUI: StateFlow<Mahasiswa> = _statusUI.asStateFlow()
+    val mahasiswaUiState: StateFlow<Mahasiswa> = _mahasiswasUiState.asStateFlow()
 
-    fun setMahasiswa(ls: MutableList<String>){
-        _statusUI.update { statusSaatIni ->
+    fun saveDataMahasiswa(ls: MutableList<String>){
+        _mahasiswasUiState.update { statusSaatIni ->
             statusSaatIni.copy(
                 nim = ls[0],
                 nama = ls[1],
@@ -23,7 +23,7 @@ class MahasiswaViewModel: ViewModel(){
         }
     }
     fun setMatakuliah(ls: MutableList<String>){
-        _statusUI.update { statusSaatIni ->
+        _mahasiswasUiState.update { statusSaatIni ->
             statusSaatIni.copy(
                 namaMatakuliah = ls[0],
                 kelas = ls[1],
