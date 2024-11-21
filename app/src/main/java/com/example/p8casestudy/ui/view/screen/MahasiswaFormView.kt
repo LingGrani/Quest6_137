@@ -104,6 +104,7 @@ fun MahasiswaFormView(
                     text = "isi sesuai data yang kamu daftarkan",
                     fontWeight = FontWeight.Light
                 )
+                Spacer(modifier = Modifier.padding(8.dp))
                 OutlinedTextField(
                     modifier = Modifier.fillMaxWidth(),
                     value = nim,
@@ -122,6 +123,7 @@ fun MahasiswaFormView(
                     singleLine = true,
                     shape = RoundedCornerShape(50.dp)
                 )
+                Spacer(modifier = Modifier.padding(4.dp))
                 OutlinedTextField(
                     modifier = Modifier.fillMaxWidth(),
                     value = nama,
@@ -140,6 +142,7 @@ fun MahasiswaFormView(
                     singleLine = true,
                     shape = RoundedCornerShape(50.dp)
                 )
+                Spacer(modifier = Modifier.padding(4.dp))
                 OutlinedTextField(
                     modifier = Modifier.fillMaxWidth(),
                     value = email,
@@ -158,7 +161,7 @@ fun MahasiswaFormView(
                     singleLine = true,
                     shape = RoundedCornerShape(50.dp)
                 )
-                Spacer(modifier = Modifier.padding(8.dp))
+                Spacer(modifier = Modifier.padding(16.dp))
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
