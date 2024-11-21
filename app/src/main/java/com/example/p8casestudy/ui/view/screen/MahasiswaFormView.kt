@@ -40,7 +40,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.p8casestudy.R
 import com.example.p8casestudy.ui.model.Mahasiswa
-import com.example.p8casestudy.ui.view.screen.part.NavUniv
 
 @Composable
 fun MahasiswaFormView(
@@ -58,7 +57,6 @@ fun MahasiswaFormView(
         background(color = colorResource(id = R.color.primary)),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        NavUniv()
         Spacer(modifier = Modifier.padding(top = 16.dp))
         Box (
             modifier = Modifier.background(

@@ -11,6 +11,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.p8casestudy.ui.model.Kelas.listKelas
 import com.example.p8casestudy.ui.view.screen.MahasiswaFormView
 import com.example.p8casestudy.ui.view.screen.MatakuliahView
 import com.example.p8casestudy.ui.view.screen.SplashView
@@ -58,7 +59,11 @@ fun NavigationControl (
         composable(
             route = Halaman.Matakuliah.name
         ){
+            val konteks = LocalContext.current
             MatakuliahView(
+                listkelas = listKelas.map { id ->
+                    konteks.resources.getString(id)
+                },
                 uiState = uistate,
                 onSimpanButtonClicked = {
                     viewModel.setMatakuliah(it)

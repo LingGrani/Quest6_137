@@ -31,24 +31,22 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.p8casestudy.R
 import com.example.p8casestudy.ui.model.Mahasiswa
-import com.example.p8casestudy.ui.view.screen.part.NavUniv
 
 @Preview
 @Composable
 fun MatakuliahView(
     uiState: Mahasiswa,
+    listkelas: List<String>,
     onSimpanButtonClicked: (MutableList<String>) -> Unit
 ){
     var namamatakuliah by remember { mutableStateOf("")}
     var kelas by remember { mutableStateOf("")}
-    val list = listOf("A", "B", "C")
     val listData : MutableList<String> = mutableListOf(namamatakuliah, kelas)
     Column(
         modifier = Modifier
             .fillMaxSize().background(colorResource(id = R.color.primary)),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        NavUniv()
         Column(
             modifier = Modifier.fillMaxSize()
                 .background(Color.White, shape = RoundedCornerShape(topStart = 15.dp, topEnd = 15.dp))
@@ -68,7 +66,7 @@ fun MatakuliahView(
                 }
                 Column (
                 ){
-                    Text(uiState.nama)
+                    Text(uiState.email)
                 }
             }
             OutlinedTextField(
@@ -79,7 +77,7 @@ fun MatakuliahView(
                 singleLine = true,
             )
             Column(){
-                list.forEach { Selected ->
+                listkelas.forEach { Selected ->
                     Row (
                         verticalAlignment = Alignment.CenterVertically
                     ) {

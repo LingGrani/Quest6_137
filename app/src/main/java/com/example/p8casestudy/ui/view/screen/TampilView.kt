@@ -21,7 +21,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.p8casestudy.R
 import com.example.p8casestudy.ui.model.Mahasiswa
-import com.example.p8casestudy.ui.view.screen.part.NavUniv
 
 @Preview(showBackground = true)
 @Composable
@@ -35,7 +34,6 @@ fun TampilView(
             .fillMaxSize().background(colorResource(id = R.color.primary)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        NavUniv()
         Column (
             modifier = Modifier.fillMaxSize()
                 .background(Color.White)
